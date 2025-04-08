@@ -41,7 +41,7 @@ func (r *Report) String() string {
 	var sb strings.Builder
 	sb.WriteString(fmt.Sprintf("├── File: %s: %d lines\n", r.FileName, r.LineCounts[r.FileName]))
 
-	// Exibe os erros, se houver
+	// Displays the errors
 	if len(r.Errors) > 0 {
 		sb.WriteString("│    └── Errors:\n")
 		for _, err := range r.Errors {
